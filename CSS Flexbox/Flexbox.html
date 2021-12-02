@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> CSS Flexbox</title>
+    <style>
+        body{margin: 0;font-family: 'Times New Roman'; }
+    
+        .container { /* Flex Entity  width: 200px;*/
+          border: 3px solid black;
+         height: 400px;
+          display: flex; /* Flex Display Properties*/ 
+         /* flex-direction: column; 
+          flex-wrap: wrap; */
+          /*flex-flow: row wrap; /* Combination of Direction and
+            wrap flex Properties*/ 
+         /* justify-content: flex-start;
+          align-items: center;*/
+         /* align-content: flex-start;/*Aligns lines of content
+            along the cross axis and distribute
+            any extra spacing in the parent container*/
+            align-items: center;
+        }
+        .flex-item {
+            color: rgb(255, 255, 255);
+            font-size: 1.5rem;
+            margin: 5px;
+            padding: 10px;
+
+            /*flex-shrink: 0;*/
+            flex: 0 1 80px;
+   
+    }
+    .item-1 {background-color: rgb(146, 34, 51); align-self: flex-start;}
+    .item-2 {background-color: #FAA094FF;flex-basis: 70px;align-self: auto;}
+    .item-3 {background-color: #9ed9ccff;}
+    .item-4 {background-color: #008c76ff;order: 0;}
+    .item-5 {background-color: #B4BF35;align-self: auto;}
+    .item-6 {background-color: #B95F21;}
+    .item-7 {background-color: #1C4C56;}
+    .item-8 {background-color: #CfB276;}
+    .item-9 {background-color: #438b67;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flex-item item-1">Item 1 </div>
+        <div class="flex-item item-2">Item 2</div>
+        <div class="flex-item item-3">Item 3</div>
+        <div class="flex-item item-4">Item 4</div> 
+        <div class="flex-item item-6">Item 6</div>
+        <div class="flex-item item-7">Item 7</div>
+        <div class="flex-item item-8">Item 8</div>
+        <div class="flex-item item-9">Item 9</div>    
+
+</body>
+</html>

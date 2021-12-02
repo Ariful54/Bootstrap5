@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pseudo-classes Selector With Forms</title>
+<style>
+    p{
+    background-color: coral;   
+    color: rgba(123, 255, 0, 0.918);
+    }
+    input[type='checkbox']:checked ~ p{
+        background-color: rgb(255, 0, 0);
+        text-decoration: line-through;
+    }
+/*Valid Pseudo-class Selector */
+    input:valid + q{
+        color: honeydew;
+        background-color: lawngreen;
+        border: 1px solid green;
+    }
+    input:invalid + q{
+        color: honeydew;
+        background-color: red;
+        border: 1px solid darkred;
+    }
+
+/*Required Pseudo-class Selector */
+    input:required + q{
+        border: 2px solid black;
+    }
+
+/*Optional Pseudo-class Selector */
+    input:optional + q{
+        color: blueviolet;
+    }
+
+</style>
+</head>
+<body>
+    <input type="checkbox" id="other" name="gender">
+    <label for="other">Other</label><br>
+    <p>Paragraph</p>
+    <p>Paragraph2</p>
+<!-- Valid  Pseudo-class Selecto -->
+    <label for="gender">Gender:</label>
+    <input type="number" id="age" name="age" 
+    min='18' max=25 >
+    <q>If valid it Green otherwise Red</q><br><br>
+
+<!-- Required  Pseudo-class Selecto -->
+    <input type="text" placeholder="Required"
+    required>
+    <q>If valid it Green otherwise Red</q><br><br>
+
+<!-- Optional  Pseudo-class Selecto -->
+    <input type="text" placeholder="optional"
+    optional>
+    <q>If valid it Green otherwise Red</q><br><br>
+
+
+    
+</body>
+</html>
