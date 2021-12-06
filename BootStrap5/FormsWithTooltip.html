@@ -21,6 +21,12 @@
                                 <i class="bi bi-person-fill text-secondary"></i>
                             </span>
                             <input type="text" id="name" class="form-control" placeholder="arif" />
+                            <!-- Tooltip -->
+                            <span class="input-group-text">
+                                <span class="tt" data-bs-placement="bottom" title="Enter your name!">
+                                    <i class="bi bi-question-circle text-muted"></i>
+                                </span>
+                            </span>
                         </div>
 
                         <label for="email" class="form-label">Email Address:</label>
@@ -53,6 +59,12 @@
                 </div>
             </div>
         </div>
-    </section>   
+    </section> 
+    <script>
+        const tooltips = document.querySelectorAll('.tt')
+        tooltips.forEach(t => {
+          new bootstrap.Tooltip(t)
+        })
+      </script> 
 </body>
 </html>
